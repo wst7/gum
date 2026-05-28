@@ -1,0 +1,15 @@
+{
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "publish": false
+  },
+  "git": {
+    "commitMessage": "chore: release v${version}",
+    "tagName": "v${version}"
+  },
+  "hooks": {
+    "beforeStart": "bun run build"
+  }
+}

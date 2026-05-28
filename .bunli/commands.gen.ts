@@ -4,25 +4,52 @@
 import type { Command, CLI, GeneratedOptionMeta, RegisteredCommands, CommandOptions, GeneratedCommandMeta } from '@bunli/core'
 import { createGeneratedHelpers, registerGeneratedStore } from '@bunli/core'
 
-import Hello from '../src/commands/hello.js'
+import Add from '../src/commands/add.js'
+import Ls from '../src/commands/ls.js'
+import Rm from '../src/commands/rm.js'
+import Show from '../src/commands/show.js'
+import Use from '../src/commands/use.js'
 
 // Narrow list of command names to avoid typeof-cycles in types
-const names = ['hello'] as const
+const names = ['add', 'ls', 'rm', 'show', 'use'] as const
 type GeneratedNames = typeof names[number]
 
 const modules: Record<GeneratedNames, Command<any>> = {
-  'hello': Hello
+  'add': Add,
+  'ls': Ls,
+  'rm': Rm,
+  'show': Show,
+  'use': Use
 } as const
 
 const metadata: Record<GeneratedNames, GeneratedCommandMeta> = {
-  'hello': {
-      name: 'hello',
-      description: 'Say hello to someone',
-      options: {
-        'name': { type: 'z.string.default', required: true, hasDefault: true, default: "World", description: 'Name to greet', short: 'n', schema: {"type":"zod","method":"default","args":[{"type":"literal","value":"World"}]}, validator: '(val) => true' },
-        'excited': { type: 'z.boolean.default', required: true, hasDefault: true, default: false, description: 'Add excitement!', short: 'e', schema: {"type":"zod","method":"default","args":[{"type":"unknown","raw":{"type":"BooleanLiteral","start":335,"end":340,"loc":{"start":{"line":12,"column":40,"index":335},"end":{"line":12,"column":45,"index":340}},"value":false}}]}, validator: '(val) => true' }
-      },
-      path: './src/commands/hello'
+  'add': {
+      name: 'add',
+      description: 'Add a new user configuration. Usage: gum add <name> <email>',
+      path: './src/commands/add'
+    },
+  'ls': {
+      name: 'ls',
+      description: 'List all configured users',
+      alias: ["list"],
+      path: './src/commands/ls'
+    },
+  'rm': {
+      name: 'rm',
+      description: 'Remove a user configuration. Usage: gum rm <name>',
+      alias: ["remove"],
+      path: './src/commands/rm'
+    },
+  'show': {
+      name: 'show',
+      description: 'Show current git user configuration',
+      alias: ["show"],
+      path: './src/commands/show'
+    },
+  'use': {
+      name: 'use',
+      description: 'Set git user for current repository. Usage: gum use <name>',
+      path: './src/commands/use'
     }
 } as const
 
