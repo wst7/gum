@@ -1,6 +1,6 @@
 {
   "name": "@wst7/gum",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Git User Manager - Switch between git users easily",
   "author": "wst7",
   "bin": {
