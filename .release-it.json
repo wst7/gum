@@ -8,8 +8,5 @@
   "git": {
     "commitMessage": "chore: release v${version}",
     "tagName": "v${version}"
-  },
-  "hooks": {
-    "beforeStart": "bun run build"
   }
 }
