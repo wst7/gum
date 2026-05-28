@@ -14,6 +14,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: AryaLabsHQ/bunli-releaser@main
+      - uses: wst7/bunli-releaser@main
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
