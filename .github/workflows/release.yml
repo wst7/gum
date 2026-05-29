@@ -11,38 +11,38 @@ jobs:
 
     permissions:
       contents: write
+      id-token: write
 
     steps:
-      # Checkout
+      # Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
 
       # Setup Bun
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
 
       # Install dependencies
       - name: Install dependencies
         run: bun install
 
-      # Build JS package
+      # Build package
       - name: Build package
         run: bun run build
 
+      # Build standalone binaries
       - name: Build binaries
         run: |
           bun install --os '*' --cpu '*'
           bun run build:all
 
-      # Publish to npm
+      # Publish package to npm using OIDC Trusted Publishing
       - name: Publish to npm
-        run: npm publish --access public --no-git-checks
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-          NPM_CONFIG_REGISTRY: https://registry.npmjs.org
+        run: bun publish --access public
 
-          
-      # Upload binaries to GitHub Release
+      # Upload standalone binaries to GitHub Release
       - name: Upload Release Assets
         uses: softprops/action-gh-release@v2
         with:
