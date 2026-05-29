@@ -40,7 +40,7 @@ jobs:
 
       # Publish package to npm using OIDC Trusted Publishing
       - name: Publish to npm
-        run: bun publish --access public
+        run: npm publish --access public
 
       # Upload standalone binaries to GitHub Release
       - name: Upload Release Assets
