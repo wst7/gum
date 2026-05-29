@@ -30,7 +30,9 @@ jobs:
         run: bun run build
 
       - name: Build binaries
-        run: bun run build:all
+        run: |
+          bun install --os '*' --cpu '*'
+          bun run build:all
 
       # Publish npm
       - name: Publish npm
