@@ -11,7 +11,6 @@
   ],
   "type": "module",
   "scripts": {
-    "prepublishOnly": "bunli build",
     "postinstall": "bunli generate",
     "dev": "bun run src/cli.ts",
     "build": "bunli build",
@@ -34,8 +33,5 @@
     "release-it": "^20.0.1",
     "typescript": "^6.0.3"
   },
-  "bunli": {
-    "entry": "./src/index.ts",
-    "outDir": "./dist"
-  }
+  "repository": "https://github.com/wst7/gum"
 }
