@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/wstreet/gum/compare/v1.1.3...v1.1.4) (2026-05-29)
+
+
+### Bug Fixes
+
+* update workflow ([e877110](https://github.com/wstreet/gum/commit/e877110ac940e627a786053fbbdcfe7af571946f))
+
 ## [1.1.3](https://github.com/wstreet/gum/compare/v1.1.2...v1.1.3) (2026-05-29)
 
 
