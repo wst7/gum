@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.8](https://github.com/wstreet/gum/compare/v1.1.7...v1.1.8) (2026-05-29)
+
+
+### Bug Fixes
+
+* update configs ([52883e2](https://github.com/wstreet/gum/commit/52883e26919e7f2f631d9333cd6e07b1fa68f818))
+
 ## [1.1.7](https://github.com/wstreet/gum/compare/v1.1.6...v1.1.7) (2026-05-29)
 
 
