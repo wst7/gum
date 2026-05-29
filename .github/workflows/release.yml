@@ -16,7 +16,7 @@ jobs:
       # Checkout repository
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       # Set Nodejs
       - uses: actions/setup-node@v6
         with:
@@ -51,4 +51,4 @@ jobs:
       - name: Upload Release Assets
         uses: softprops/action-gh-release@v2
         with:
-          files: binaries/*
+          files: binaries/**/*
