@@ -36,19 +36,19 @@ jobs:
 
       # Publish to GitHub Packages
       - name: Publish to GitHub Packages
-        run: npm publish
+        run: npm publish --access public --no-git-checks
         env:
-          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_CONFIG_REGISTRY: https://npm.pkg.github.com
-          
+
       # Publish to npm
       - name: Publish to npm
-        run: npm publish
+        run: npm publish --access public --no-git-checks
         env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_REGISTRY: https://registry.npmjs.org
 
-
+          
       # Upload binaries to GitHub Release
       - name: Upload Release Assets
         uses: softprops/action-gh-release@v2
