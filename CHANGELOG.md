@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/wstreet/gum/compare/v1.1.0...v1.1.1) (2026-05-29)
+
+
+### Bug Fixes
+
+* reorder publish steps and update package.json ([2d42a72](https://github.com/wstreet/gum/commit/2d42a720c715d70bc5019df19398cd03b087430f))
+
 # [1.1.0](https://github.com/wstreet/gum/compare/v1.0.10...v1.1.0) (2026-05-29)
 
 
