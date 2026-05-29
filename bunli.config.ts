@@ -10,12 +10,10 @@ export default defineConfig({
   },
 
   build: {
-    entry: "./src/index.ts",
+    entry: "./src/cli.ts",
     outdir: "./dist",
-    targets: ["darwin-arm64", "darwin-x64", "linux-arm64", "linux-x64", "windows-x64"],
     minify: true,
     sourcemap: false,
-    compress: true,
   },
 
   release: {

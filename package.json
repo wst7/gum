@@ -4,7 +4,7 @@
   "description": "Git User Manager - Switch between git users easily",
   "author": "wst7",
   "bin": {
-    "gum": "./dist/index.js"
+    "gum": "./dist/cli.js"
   },
   "files": [
     "dist/"
@@ -13,8 +13,9 @@
   "scripts": {
     "prepublishOnly": "bunli build",
     "postinstall": "bunli generate",
-    "dev": "bun run src/index.ts",
+    "dev": "bun run src/cli.ts",
     "build": "bunli build",
+    "build:all": "bunli build --targets all --outdir ./binaries",
     "typecheck": "npx tsc --noEmit",
     "release": "release-it"
   },
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "@bunli/test": "^0.6.0",
+    "@release-it/conventional-changelog": "^11.0.0",
     "@tsconfig/bun": "^1.0.10",
     "@types/bun": "^1.3.14",
     "@types/ini": "^4.1.1",
