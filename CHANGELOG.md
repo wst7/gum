@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.7](https://github.com/wstreet/gum/compare/v1.1.6...v1.1.7) (2026-05-29)
+
+
+### Bug Fixes
+
+* remove postinstall script ([abdea88](https://github.com/wstreet/gum/commit/abdea884f811639e15b50bb299be64db6b22e274))
+* workflow ([b8b5545](https://github.com/wstreet/gum/commit/b8b55452210d46b7cd100f923d9b3280958efaa1))
+
 ## [1.1.6](https://github.com/wstreet/gum/compare/v1.1.5...v1.1.6) (2026-05-29)
 
 
