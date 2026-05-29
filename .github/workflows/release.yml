@@ -37,18 +37,32 @@ jobs:
       - name: Build package
         run: bun run build
 
+      # Publish package to npm using OIDC Trusted Publishing
+      - name: Publish to npm
+        run: npm publish --access public
+
       # Build standalone binaries
       - name: Build binaries
         run: |
           bun install --os '*' --cpu '*'
           bun run build:all
 
-      # Publish package to npm using OIDC Trusted Publishing
-      - name: Publish to npm
-        run: npm publish --access public
+      - name: Rename binaries
+        run: |
+          find binaries -type f
+          mv binaries/darwin-arm64/cli binaries/gum-darwin-arm64
+          mv binaries/darwin-x64/cli binaries/gum-darwin-x64
+          mv binaries/linux-arm64/cli binaries/gum-linux-arm64
+          mv binaries/linux-x64/cli binaries/gum-linux-x64
+          mv binaries/windows-x64/cli.exe binaries/gum-windows-x64.exe
 
       # Upload standalone binaries to GitHub Release
       - name: Upload Release Assets
         uses: softprops/action-gh-release@v2
         with:
-          files: binaries/**/*
+          files:  |
+            binaries/gum-darwin-arm64
+            binaries/gum-darwin-x64
+            binaries/gum-linux-arm64
+            binaries/gum-linux-x64
+            binaries/gum-windows-x64.exe
