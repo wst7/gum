@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.10](https://github.com/wstreet/gum/compare/v1.0.9...v1.0.10) (2026-05-29)
+
+
+### Bug Fixes
+
+* install all platform deps for build ([f53fbcc](https://github.com/wstreet/gum/commit/f53fbcce0022d8bc2e12a65a3449254ff48921e0))
+
 ## [1.0.9](https://github.com/wstreet/gum/compare/v1.0.8...v1.0.9) (2026-05-29)
 
 
