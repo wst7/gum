@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.1.0](https://github.com/wstreet/gum/compare/v1.0.10...v1.1.0) (2026-05-29)
+
+
+### Features
+
+* add standalone binaries and multi-platform publish ([f2a7791](https://github.com/wstreet/gum/commit/f2a77919f673b240cfa8dd82ee936fba5a20582a))
+
 ## [1.0.10](https://github.com/wstreet/gum/compare/v1.0.9...v1.0.10) (2026-05-29)
 
 
