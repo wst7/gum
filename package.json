@@ -4,7 +4,7 @@
   "description": "Git User Manager - Switch between git users easily",
   "author": "wst7",
   "bin": {
-    "gum": "./dist/cli.js"
+    "gum": "dist/cli.js"
   },
   "files": [
     "dist/"

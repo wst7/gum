@@ -4,13 +4,24 @@ Git User Manager - Switch between git users easily.
 
 ## Installation
 
+### npm / GitHub Packages
+
 ```bash
-# npm
 npm install -g @wst7/gum
 
-# or bun
-bun add -g @wst7/gum
 ```
+
+### Standalone Binary (No Bun required)
+
+Download from [GitHub Releases](https://github.com/wst7/gum/releases/latest):
+
+| Platform | Download |
+|----------|----------|
+| macOS ARM64 | `gum-x.x.x-darwin-arm64.tar.gz` |
+| macOS x64 | `gum-x.x.x-darwin-x64.tar.gz` |
+| Linux ARM64 | `gum-x.x.x-linux-arm64.tar.gz` |
+| Linux x64 | `gum-x.x.x-linux-x64.tar.gz` |
+| Windows | `gum-x.x.x-windows-x64.zip` |
 
 ## Usage
 

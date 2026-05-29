@@ -34,11 +34,19 @@ jobs:
           bun install --os '*' --cpu '*'
           bun run build:all
 
-      # Publish npm
-      - name: Publish npm
+      # Publish to npm
+      - name: Publish to npm
         run: npm publish
         env:
-          NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_REGISTRY: https://registry.npmjs.org
+
+      # Publish to GitHub Packages
+      - name: Publish to GitHub Packages
+        run: npm publish
+        env:
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_CONFIG_REGISTRY: https://npm.pkg.github.com
 
       # Upload binaries to GitHub Release
       - name: Upload Release Assets
